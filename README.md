@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 MINECRAFT PLAN
 
 CORE FUNCTIONALITY
@@ -53,3 +54,6 @@ Cursor image becomes tool choice
 =======
 # minecraft
 >>>>>>> fc1c043276c831d8f3e30f369491734cd70aaf06
+=======
+# minecraft-2d
+>>>>>>> f0ba9879cbeecaa51354ee93ff7929db4944f5db
