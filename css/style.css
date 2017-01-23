@@ -1,0 +1,329 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header,/*hgroup,*/menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+body {
+    line-height:1;
+}
+article,aside,details,figcaption,figure,
+footer,header,/*hgroup,*/menu,nav,section {
+    display:block;
+}
+nav ul {
+    list-style:none;
+}
+blockquote, q {
+    quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:none;
+}
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+del {
+    text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+input, select {
+    vertical-align:middle;
+}
+
+/*ID Classes*/
+.container {
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 4%;
+    background-image:url('../images/minecraftlogo.png');
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    min-width: 100%;
+}
+.main-game-container{
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 2%;
+    background-image:url('../images/backgroundblue.png');
+    background-size: cover;
+}
+.inner-container{
+    position: relative;
+    display: block;
+    padding-bottom: 20%;
+    padding-top: 20%;
+    text-align: center;
+}
+
+#board {
+    display: inline-block;
+    border: 1px solid black;
+    width: 962px;
+}
+
+#sidebar {
+    position: fixed;
+    height: auto;
+    top: 2%;
+    width: 5em;
+    border: 1px solid black;
+    border-radius: 5px;
+    left: 1%;
+    background-color: silver;
+    padding: 5px 0 5px 0;
+}
+
+#toolbox {
+}
+
+#inventory {
+
+}
+/*End ID*/
+
+.falling-leaves{
+    background-image: url('../images/leafcropped.gif');
+    background-size: cover;
+}
+
+/*Welcome Page*/
+.startButton{
+    position: relative;
+    color: #D59527;
+    height: 50px;
+    margin-top: -9%;
+    padding-bottom: 5%;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    font-size: 30px;
+    display: inline;
+}
+.startButton:hover{
+    color: white;
+}
+
+.continueButton{
+    position: relative;
+    color: #D59527;
+    height: 50px;
+    margin-top: -5%;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    font-size: 30px;
+    display: inline;
+}
+.continueButton:hover{
+    color:white;
+}
+
+/*Cursors*/
+.cursor-shovel{
+    cursor: url('../images/cursors/cursor.cur'), auto;
+}
+.cursor-pickaxe{
+    cursor: url('../images/cursors/pickaxe.cur'), auto;
+}
+.cursor-axe{
+    cursor: url('../images/cursors/axe.cur'), auto;
+}
+.cursor-inventory {
+    cursor: pointer;
+}
+
+.cursor-hand {
+    cursor: pointer;
+}
+
+/*Board Classes*/
+.tile {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0px;
+    padding: 0px;
+    background-color: lightblue;
+}
+.tile:hover{
+    border: 1px solid white;
+    box-sizing: border-box;
+}
+
+
+.tile.interact:hover {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), url('../images/tiles/bedrock.png'));
+    border: 4px solid #11841C;
+    opacity: .5;
+}
+
+.row{
+    height: 30px;
+    display: block;
+    line-height: 0;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*Tile Classes*/
+.sky {
+    background-color: lightblue;
+}
+
+.cloud {
+    background-image: url(../images/tiles/cloud.png);
+    background-size: contain;
+}
+
+.stone {
+    background-image: url(../images/tiles/cobblestone.png);
+    background-size: contain;
+}
+
+.leaves {
+    background-image: url(../images/tiles/leaves.png);
+    background-size: contain;
+}
+
+.wood {
+    background-image: url(../images/tiles/trunk.png);
+    background-size: contain;
+}
+
+.grass {
+    background-image: url(../images/tiles/grass_side.png);
+    background-size: contain;
+}
+
+.earth {
+    background-image: url(../images/tiles/dirt.png);
+    background-size: contain;
+}
+
+/* Tool Classes */
+#hand{
+    background-image: url('../images/handIcon.png');
+    background-size: cover;
+}
+
+
+#pickaxe{
+    background-image: url('../images/pickaxegoodres.png');
+    background-size: cover;
+}
+#shovel{
+    background-image: url('../images/shovelgoodres.png');
+
+    background-size: cover;
+}
+#axe{
+    background-image: url('../images/axegoodres.png');
+
+    background-size: cover;
+}
+#inventory{
+    height: 30px;
+    width: 30px;
+    background-color: transparent; !important;
+    margin-left: 33%;
+    margin-top: 20%;
+    position: relative;
+    border-radius: 12px 12px 12px 12px;
+    -moz-border-radius: 12px 12px 12px 12px;
+    -webkit-border-radius: 12px 12px 12px 12px;
+    border: 1px solid #000000;
+}
+
+.tools{
+    height: 60px;
+    width: 60px;
+    margin: 0 auto;
+    border-radius: 21px 21px 21px 21px;
+    -moz-border-radius: 21px 21px 21px 21px;
+    -webkit-border-radius: 21px 21px 21px 21px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.invItem {
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.bottomButton {
+    margin: 10px;
+    display: inline-block;
+    width: 130px;
+    height: 40px;
+    border-radius: 12px 12px 12px 12px;
+    -moz-border-radius: 12px 12px 12px 12px;
+    -webkit-border-radius: 12px 12px 12px 12px;
+    background-color: #395668;
+    padding-right: 1%;
+    padding-left: 1%;
+    padding-top: 1%;
+    padding-bottom: -0.5%;
+    color: #D59527;
+    font-family: 'Press Start 2P', cursive;;
+
+}
+.bottomButton:hover{
+    cursor: pointer;
+    background-color: black;
+
+}
+#bottom{
+    margin-left: 10%;
+}
